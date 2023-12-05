@@ -1,8 +1,9 @@
 import streamlit as st
-import seaborn as sns
+# import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import altair as alt
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
