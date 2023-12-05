@@ -1,4 +1,4 @@
-seaborn==0.13.0
+altair
 streamlit
 matplotlib
 pandas
