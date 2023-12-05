@@ -1,4 +1,4 @@
-seaborn
+seaborn==0.13.0
 streamlit
 matplotlib
 pandas
