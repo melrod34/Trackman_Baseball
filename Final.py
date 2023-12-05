@@ -46,7 +46,10 @@ filtered_data = trackman_data[(trackman_data['Batter'] == selected_hitter) &
 
 # Points
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x='Bearing', y='LastTrackedDistance', data=filtered_data, marker='o', s=100, color='blue')
+alt.Chart(source).mark_circle(size=60).encode(
+    x='Bearing',
+    y='LastTrackedDistance',
+)
 plt.title(f'{selected_hitter} - Batter Spray Chart')
 
 # Foul Lines
