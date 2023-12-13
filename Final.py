@@ -35,7 +35,8 @@ selected_hitter = st.sidebar.selectbox('Select Hitter:', hitter_options)
 play_result_options = ['Out', 'FieldersChoice', 'Error', 'Sacrifice', 'Single', 'Double', 'Triple', 'HomeRun']
 selected_play_result = st.sidebar.selectbox('Select Play Result:', play_result_options)
 
-
+# pitch_options = trackman_data['TaggedPitchType'].unique()
+# selected_hitter = st.sidebar.selectbox('Select Pitch:', pitch_options)
 
 # Filters
 filtered_data = trackman_data[(trackman_data['Batter'] == selected_hitter) &
