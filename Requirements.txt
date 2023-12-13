@@ -1,6 +1,4 @@
-altair
 streamlit
-matplotlib
+matplotlib.pyplot
 pandas
 numpy
-streamlit==1.28.0
