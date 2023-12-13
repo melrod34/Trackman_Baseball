@@ -46,9 +46,6 @@ filtered_data = trackman_data[(trackman_data['Batter'] == selected_hitter) &
 
 
 
-if selected_play_result != 'All':
-    filtered_data = filtered_data[filtered_data['PlayResult'] == selected_play_result]
-
 import math
 
 def get_x_y_pos(row):
