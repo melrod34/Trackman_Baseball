@@ -1,5 +1,5 @@
 # Trackman_Baseball
-[Trackman Baseball]https://trackmanbaseball.streamlit.app/
+[Trackman Baseball](https://trackmanbaseball.streamlit.app/)
 
 ### Utilizing Trackman Data for Hitters
 Trackman Data is mainly used for visualizing pitcher data and creating upmire reports. Here I am using the hitting variables for the UNCW hitters for the 22-23 baseball season. It is a spray chart for the batters where you can filter based on which hitter you would like to look at as well as the play result (out, single, etc.) 
