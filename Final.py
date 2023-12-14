@@ -35,6 +35,8 @@ selected_hitter = st.sidebar.selectbox('Select Hitter:', hitter_options)
 play_result_options = ['Out', 'FieldersChoice', 'Error', 'Sacrifice', 'Single', 'Double', 'Triple', 'HomeRun']
 selected_play_result = st.sidebar.selectbox('Select Play Result:', play_result_options)
 
+# hit_type_options = ['GroundBall', 'LineDrive', 'FlyBall', 'Bunt', 'Popup']
+# selected_hit_type = st.sidebar.selectbox('Select Hit Type:', hit_type_options)
 
 # pitch_type_options = ['All'] + list(trackman_data['TaggedPitchType'].unique())
 # selected_pitch_type = st.sidebar.selectbox('Select Pitch Type:', pitch_type_options)
@@ -48,7 +50,7 @@ selected_play_result = st.sidebar.selectbox('Select Play Result:', play_result_o
 filtered_data = trackman_data[(trackman_data['Batter'] == selected_hitter) &
                               (trackman_data['PitchCall'] == 'InPlay') &
                               (trackman_data['BatterTeam'] == 'UNC_SEA') &
-                              (trackman_data['PlayResult'] == selected_play_result)
+                              (trackman_data['PlayResult'] == selected_play_result) 
                             #   (trackman_data['TaggedPitchType'] == pitch_type_options)
                               ] 
 
