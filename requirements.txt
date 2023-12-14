@@ -2,4 +2,3 @@ streamlit
 matplotlib
 pandas
 numpy
-math
