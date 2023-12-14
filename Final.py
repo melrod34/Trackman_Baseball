@@ -35,14 +35,21 @@ selected_hitter = st.sidebar.selectbox('Select Hitter:', hitter_options)
 play_result_options = ['Out', 'FieldersChoice', 'Error', 'Sacrifice', 'Single', 'Double', 'Triple', 'HomeRun']
 selected_play_result = st.sidebar.selectbox('Select Play Result:', play_result_options)
 
-# pitch_options = trackman_data['TaggedPitchType'].unique()
-# selected_hitter = st.sidebar.selectbox('Select Pitch:', pitch_options)
+
+# pitch_type_options = ['All'] + list(trackman_data['TaggedPitchType'].unique())
+# selected_pitch_type = st.sidebar.selectbox('Select Pitch Type:', pitch_type_options)
+
+
+# if selected_pitch_type != 'All':
+#     filtered_data = trackman_data[trackman_data['TaggedPitchType'] == selected_pitch_type]
+
 
 # Filters
 filtered_data = trackman_data[(trackman_data['Batter'] == selected_hitter) &
                               (trackman_data['PitchCall'] == 'InPlay') &
                               (trackman_data['BatterTeam'] == 'UNC_SEA') &
                               (trackman_data['PlayResult'] == selected_play_result)
+                            #   (trackman_data['TaggedPitchType'] == pitch_type_options)
                               ] 
 
 
@@ -56,7 +63,7 @@ def get_x_y_pos(row):
 
 new_df = filtered_data.apply(get_x_y_pos, axis=1)
 
-st.write(new_df)
+
 
 
 # Points
@@ -98,9 +105,13 @@ plt.scatter([-24], [90], color='red', marker='s', s=75, zorder=10)
 plt.scatter([24], [90], color='red', marker='s', s=75, zorder=10)
 plt.scatter([0], [0], color='red', marker='s', s=75, zorder=10)
 
-plt.xlim(-105, 105)
+plt.xlim(-110, 110)
 plt.ylim(-10, 425)
 
-
-
+st.text('Spray Chart for all UNCW Batters during the 22-23 season.')
+st.text('You can use the SelectBoxs on the right side to filter by hit') 
+st.text('type as well as each batter. This data was gathered using Tackman.')
 st.pyplot()
+
+
+st.write(new_df)
