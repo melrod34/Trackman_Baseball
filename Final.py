@@ -109,7 +109,7 @@ plt.xlim(-110, 110)
 plt.ylim(-10, 425)
 
 st.text('Spray Chart for all UNCW Batters during the 22-23 season.')
-st.text('You can use the SelectBoxs on the right side to filter by hit') 
+st.text('You can use the SelectBoxs on the left side to filter by hit') 
 st.text('type as well as each batter. This data was gathered using Tackman.')
 st.pyplot()
 
