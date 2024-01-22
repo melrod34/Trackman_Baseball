@@ -23,10 +23,11 @@ def outfield_line(x):
 
 
 
-
-trackman_data = pd.read_csv('UNCWBaseballc.csv')
+def read_data():
+    trackman_data = pd.read_csv('UNCWBaseballc.csv')
+    return trackman_data
 # Select Box
-
+trackman_data = read_data()
 hitter_options = trackman_data[trackman_data['BatterTeam'] == 'UNC_SEA']['Batter'].unique()
 selected_hitter = st.sidebar.selectbox('Select Hitter:', hitter_options)
 
@@ -34,6 +35,10 @@ selected_hitter = st.sidebar.selectbox('Select Hitter:', hitter_options)
 
 play_result_options = ['Out', 'FieldersChoice', 'Error', 'Sacrifice', 'Single', 'Double', 'Triple', 'HomeRun']
 selected_play_result = st.sidebar.selectbox('Select Play Result:', play_result_options)
+# if selected_play_result == 'All':
+#     trackman_data = read_data()
+# else:
+#     trackman_data = trackman_data[trackman_data['PlayResult'].isin(selected_play_result)]
 
 # hit_type_options = ['GroundBall', 'LineDrive', 'FlyBall', 'Bunt', 'Popup']
 # selected_hit_type = st.sidebar.selectbox('Select Hit Type:', hit_type_options)
